@@ -25,7 +25,7 @@ services:
       - /usr/src/app/node_modules
     networks:
       - server-network
-    command: npm run start:dev auth # overrides CMD from dockerfile
+    command: npx nodemon server # overrides CMD from dockerfile
 
   frontend:
     build:
@@ -41,7 +41,7 @@ services:
       - /usr/src/app/node_modules
     networks:
       - server-network
-    command: npm run start:dev api
+    command: yarn start
 
  
 #Docker Networks
